@@ -1,0 +1,5 @@
+# Preserve the original recording bytes and provenance hashes across platforms.
+# Original CSV exports use CRLF; recognize the terminator without altering bytes.
+measurements/**/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+measurements/**/jetson-telemetry-*.json -text
+measurements/**/analysis.json text eol=lf

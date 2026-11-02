@@ -1,5 +1,10 @@
 # TensorRT performance experiment
 
+For the separate **single 86.52-second power recording** and theoretical battery
+calculations, see [battery sizing](battery-sizing.md). These FPS experiments do
+not establish repeated-run battery endurance. The original "board power" label
+means VDD_IN module power, not a verified complete-kit or battery-side reading.
+
 Measured on 2026-11-01 on the user's Jetson Orin Nano Super, Ubuntu 22.04 /
 L4T R36.4.7, TensorRT 10.3, CUDA 12.6 and uv-managed Python 3.14.7.
 Power mode remained MAXN_SUPER with the original `schedutil` governor;

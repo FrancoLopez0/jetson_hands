@@ -94,6 +94,19 @@ validates PNG dimensions, checks that exports omit the token, and verifies
 history retention, reconnect, the 3600-sample bound and clearing. Generated
 files and screenshots are in `runtime/telemetry-*`.
 
+## Power measurement and battery sizing
+
+[Power analysis and preliminary battery sizing](docs/battery-sizing.md) contains
+the 18650 series/parallel and power-tool battery comparisons, conversion/reserve
+assumptions, measured GPU/CPU behavior and module-versus-system boundary.
+
+**This analysis is based on ONE independent 86.52-second power recording.**
+Its CSV (87 samples) and JSON (86 samples) are two exports of the same session,
+not replicated experiments. The 7.653 W result is module power; 10 W is an
+unmeasured comparison scenario. Battery runtimes are calculations, not endurance
+tests. [Original inputs and SHA256-backed analysis](measurements/2026-11-02-single-run/README.md)
+are archived separately from disposable `runtime/` verification artifacts.
+
 ## Architecture and latency control
 
 ```text
@@ -299,8 +312,9 @@ Full resolution/backend comparisons, validation scope and reproduction commands
 are in [docs/performance.md](docs/performance.md).
 
 The live scene during verification contained no hands. Physical tracking still
-needs a hand placed in view. Thirty-nine tests passed on both Windows and
-the Jetson. Live driver capture, JPEG decoding, token rejection, receiver
+needs a hand placed in view. The application previously passed 39 tests on both
+Windows and the Jetson; the current local suite passes 44 tests including the
+archived energy-analysis checks. Live driver capture, JPEG decoding, token rejection, receiver
 exclusivity and reconnection passed against the deployed service.
 
 **Timing definitions:** the Tegra VI hardware timestamp was observed to have a

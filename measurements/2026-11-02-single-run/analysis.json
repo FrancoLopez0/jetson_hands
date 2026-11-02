@@ -1,0 +1,197 @@
+{
+  "independent_measurement_runs": 1,
+  "scope": "One short exploratory module-power recording; not whole-system or repeated-run validation",
+  "sources": {
+    "csv": {
+      "filename": "jetson-telemetry-2026-11-02T02-53-03-475Z.csv",
+      "sha256": "a41c38e5060ae211784488fb24aee42ff432841ccccacbe17956f9df3bfab613"
+    },
+    "json": {
+      "filename": "jetson-telemetry-2026-11-02T02-53-02-491Z.json",
+      "sha256": "88438ef1dc4a2785e57135fe882379ad3c74d69f1251c2bd64f3f31213f22ed5"
+    }
+  },
+  "csv_samples": 87,
+  "json_samples": 86,
+  "matching_json_samples": 86,
+  "start_utc": "2026-11-02T02:51:36.173Z",
+  "end_utc": "2026-11-02T02:53:02.693Z",
+  "duration_s": 86.52000000000044,
+  "interval_s": {
+    "min": 1.0049999999991996,
+    "max": 1.0079999999998108,
+    "mean": 1.006046511627912
+  },
+  "vdd_in_w": {
+    "time_weighted_mean": 7.653395446139621,
+    "sample_mean": 7.653931034482759,
+    "min": 7.542,
+    "max": 7.739,
+    "population_stddev": 0.06002677431415101
+  },
+  "energy_j": 662.1717740000033,
+  "energy_wh": 0.1839366038888898,
+  "gpu_clock_mhz_values": [
+    306.0
+  ],
+  "segments": {
+    "higher_gpu_before": {
+      "samples": 34,
+      "start_utc": "2026-11-02T02:51:36.173Z",
+      "end_utc": "2026-11-02T02:52:09.375Z",
+      "sample_means": {
+        "power_input_w": 7.698764705882353,
+        "power_cpu_gpu_cv_w": 1.7010882352941177,
+        "power_soc_w": 2.602029411764706,
+        "cpu_usage_pct": 15.87264705882353,
+        "cpu_clock_mean_mhz": 1087.5482352941176,
+        "gpu_usage_pct": 32.470588235294116,
+        "gpu_clock_mhz": 306.0
+      }
+    },
+    "lower_gpu_plateau": {
+      "samples": 21,
+      "start_utc": "2026-11-02T02:52:13.399Z",
+      "end_utc": "2026-11-02T02:52:33.519Z",
+      "sample_means": {
+        "power_input_w": 7.579142857142857,
+        "power_cpu_gpu_cv_w": 1.655,
+        "power_soc_w": 2.582952380952381,
+        "cpu_usage_pct": 16.245238095238093,
+        "cpu_clock_mean_mhz": 1143.1023809523808,
+        "gpu_usage_pct": 17.0,
+        "gpu_clock_mhz": 306.0
+      }
+    },
+    "higher_gpu_after": {
+      "samples": 19,
+      "start_utc": "2026-11-02T02:52:44.585Z",
+      "end_utc": "2026-11-02T02:53:02.693Z",
+      "sample_means": {
+        "power_input_w": 7.699947368421053,
+        "power_cpu_gpu_cv_w": 1.7130526315789474,
+        "power_soc_w": 2.6028421052631576,
+        "cpu_usage_pct": 15.762105263157896,
+        "cpu_clock_mean_mhz": 1200.788947368421,
+        "gpu_usage_pct": 31.210526315789473,
+        "gpu_clock_mhz": 306.0
+      }
+    }
+  },
+  "battery_assumptions": {
+    "converter_efficiency": 0.9,
+    "usable_energy_fraction": 0.8,
+    "cell_nominal_v": 3.6,
+    "cell_typical_ah": 3.5,
+    "whole_system_10w_is_measured": false
+  },
+  "packs_18650": [
+    {
+      "configuration": "2S1P",
+      "cells": 2,
+      "nominal_v": 7.2,
+      "capacity_ah": 3.5,
+      "nominal_wh": 25.2,
+      "runtime_h_at_measured_module_power": 2.3707124671248825,
+      "runtime_h_at_unmeasured_10w_scenario": 1.8144000000000002
+    },
+    {
+      "configuration": "3S1P",
+      "cells": 3,
+      "nominal_v": 10.8,
+      "capacity_ah": 3.5,
+      "nominal_wh": 37.800000000000004,
+      "runtime_h_at_measured_module_power": 3.556068700687324,
+      "runtime_h_at_unmeasured_10w_scenario": 2.7216000000000005
+    },
+    {
+      "configuration": "4S1P",
+      "cells": 4,
+      "nominal_v": 14.4,
+      "capacity_ah": 3.5,
+      "nominal_wh": 50.4,
+      "runtime_h_at_measured_module_power": 4.741424934249765,
+      "runtime_h_at_unmeasured_10w_scenario": 3.6288000000000005
+    },
+    {
+      "configuration": "3S2P",
+      "cells": 6,
+      "nominal_v": 10.8,
+      "capacity_ah": 7.0,
+      "nominal_wh": 75.60000000000001,
+      "runtime_h_at_measured_module_power": 7.112137401374648,
+      "runtime_h_at_unmeasured_10w_scenario": 5.443200000000001
+    },
+    {
+      "configuration": "4S2P",
+      "cells": 8,
+      "nominal_v": 14.4,
+      "capacity_ah": 7.0,
+      "nominal_wh": 100.8,
+      "runtime_h_at_measured_module_power": 9.48284986849953,
+      "runtime_h_at_unmeasured_10w_scenario": 7.257600000000001
+    },
+    {
+      "configuration": "5S2P",
+      "cells": 10,
+      "nominal_v": 18.0,
+      "capacity_ah": 7.0,
+      "nominal_wh": 126.0,
+      "runtime_h_at_measured_module_power": 11.853562335624414,
+      "runtime_h_at_unmeasured_10w_scenario": 9.072000000000001
+    },
+    {
+      "configuration": "6S2P",
+      "cells": 12,
+      "nominal_v": 21.6,
+      "capacity_ah": 7.0,
+      "nominal_wh": 151.20000000000002,
+      "runtime_h_at_measured_module_power": 14.224274802749296,
+      "runtime_h_at_unmeasured_10w_scenario": 10.886400000000002
+    }
+  ],
+  "tool_packs": [
+    {
+      "nominal_v": 18,
+      "capacity_ah": 2,
+      "nominal_wh": 36,
+      "runtime_h_at_measured_module_power": 3.386732095892689,
+      "runtime_h_at_unmeasured_10w_scenario": 2.592
+    },
+    {
+      "nominal_v": 18,
+      "capacity_ah": 3,
+      "nominal_wh": 54,
+      "runtime_h_at_measured_module_power": 5.080098143839034,
+      "runtime_h_at_unmeasured_10w_scenario": 3.8880000000000003
+    },
+    {
+      "nominal_v": 18,
+      "capacity_ah": 4,
+      "nominal_wh": 72,
+      "runtime_h_at_measured_module_power": 6.773464191785378,
+      "runtime_h_at_unmeasured_10w_scenario": 5.184
+    },
+    {
+      "nominal_v": 18,
+      "capacity_ah": 5,
+      "nominal_wh": 90,
+      "runtime_h_at_measured_module_power": 8.466830239731722,
+      "runtime_h_at_unmeasured_10w_scenario": 6.4799999999999995
+    },
+    {
+      "nominal_v": 18,
+      "capacity_ah": 6,
+      "nominal_wh": 108,
+      "runtime_h_at_measured_module_power": 10.160196287678067,
+      "runtime_h_at_unmeasured_10w_scenario": 7.776000000000001
+    },
+    {
+      "nominal_v": 18,
+      "capacity_ah": 8,
+      "nominal_wh": 144,
+      "runtime_h_at_measured_module_power": 13.546928383570757,
+      "runtime_h_at_unmeasured_10w_scenario": 10.368
+    }
+  ]
+}

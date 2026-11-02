@@ -1,0 +1,5437 @@
+{
+  "schema_version": 1,
+  "exported_at": "2026-11-02T02:53:02.488Z",
+  "sampling_interval_ms": 1000,
+  "retained_sample_limit": 3600,
+  "chart_window_seconds": 120,
+  "units": {
+    "power": "W",
+    "clocks": "MHz",
+    "utilization": "%"
+  },
+  "definitions": {
+    "cpu": "Mean utilization/clock of online cores; per-core values included",
+    "input_power": "VDD_IN board input rail, not wall power",
+    "cpu_gpu_cv_power": "Combined CPU/GPU/CV rail, not separate CPU and GPU power"
+  },
+  "samples": [
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 477,
+      "timestamp_ms": 1793587896173,
+      "monotonic_ms": 13453801,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 14.67,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 48,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 28,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 37,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 478,
+      "timestamp_ms": 1793587897180,
+      "monotonic_ms": 13454808,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.17,
+        "clock_mhz": 1728,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 38,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 479,
+      "timestamp_ms": 1793587898186,
+      "monotonic_ms": 13455814,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 38,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 480,
+      "timestamp_ms": 1793587899192,
+      "monotonic_ms": 13456820,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 35,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.66,
+        "rails_w": {
+          "VDD_IN": 7.66,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 481,
+      "timestamp_ms": 1793587900198,
+      "monotonic_ms": 13457826,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 10,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 34,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 482,
+      "timestamp_ms": 1793587901205,
+      "monotonic_ms": 13458833,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.5,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 34,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 483,
+      "timestamp_ms": 1793587902211,
+      "monotonic_ms": 13459839,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 11,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 35,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.739,
+        "rails_w": {
+          "VDD_IN": 7.739,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 484,
+      "timestamp_ms": 1793587903217,
+      "monotonic_ms": 13460844,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 34,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 485,
+      "timestamp_ms": 1793587904222,
+      "monotonic_ms": 13461850,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16,
+        "clock_mhz": 1702.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 36,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.731,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 486,
+      "timestamp_ms": 1793587905229,
+      "monotonic_ms": 13462856,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 33,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 487,
+      "timestamp_ms": 1793587906235,
+      "monotonic_ms": 13463862,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 32,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 488,
+      "timestamp_ms": 1793587907241,
+      "monotonic_ms": 13464869,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.33,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 10,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 489,
+      "timestamp_ms": 1793587908247,
+      "monotonic_ms": 13465875,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.33,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 490,
+      "timestamp_ms": 1793587909253,
+      "monotonic_ms": 13466881,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 491,
+      "timestamp_ms": 1793587910260,
+      "monotonic_ms": 13467887,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.67,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 492,
+      "timestamp_ms": 1793587911266,
+      "monotonic_ms": 13468894,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.5,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 11,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 493,
+      "timestamp_ms": 1793587912272,
+      "monotonic_ms": 13469900,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.67,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 494,
+      "timestamp_ms": 1793587913278,
+      "monotonic_ms": 13470906,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 495,
+      "timestamp_ms": 1793587914284,
+      "monotonic_ms": 13471912,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 496,
+      "timestamp_ms": 1793587915291,
+      "monotonic_ms": 13472918,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 497,
+      "timestamp_ms": 1793587916297,
+      "monotonic_ms": 13473925,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.33,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.731,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 498,
+      "timestamp_ms": 1793587917304,
+      "monotonic_ms": 13474931,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 985,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1497
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1497
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 499,
+      "timestamp_ms": 1793587918309,
+      "monotonic_ms": 13475936,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.17,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 500,
+      "timestamp_ms": 1793587919315,
+      "monotonic_ms": 13476942,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 501,
+      "timestamp_ms": 1793587920321,
+      "monotonic_ms": 13477948,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 502,
+      "timestamp_ms": 1793587921327,
+      "monotonic_ms": 13478955,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 503,
+      "timestamp_ms": 1793587922333,
+      "monotonic_ms": 13479961,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.66,
+        "rails_w": {
+          "VDD_IN": 7.66,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 504,
+      "timestamp_ms": 1793587923339,
+      "monotonic_ms": 13480967,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.5,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 36,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 505,
+      "timestamp_ms": 1793587924346,
+      "monotonic_ms": 13481974,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16,
+        "clock_mhz": 985,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1497
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1497
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 33,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 506,
+      "timestamp_ms": 1793587925351,
+      "monotonic_ms": 13482979,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.83,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 11,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 35,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.731,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 507,
+      "timestamp_ms": 1793587926357,
+      "monotonic_ms": 13483984,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.67,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 12,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 73,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 35,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.739,
+        "rails_w": {
+          "VDD_IN": 7.739,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 508,
+      "timestamp_ms": 1793587927363,
+      "monotonic_ms": 13484990,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16,
+        "clock_mhz": 1728,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 18,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 60,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 34,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 509,
+      "timestamp_ms": 1793587928369,
+      "monotonic_ms": 13485996,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 35,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.66,
+        "rails_w": {
+          "VDD_IN": 7.66,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 510,
+      "timestamp_ms": 1793587929375,
+      "monotonic_ms": 13487002,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 17.5,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 12,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.731,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 511,
+      "timestamp_ms": 1793587930381,
+      "monotonic_ms": 13488008,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 11,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.731,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 512,
+      "timestamp_ms": 1793587931387,
+      "monotonic_ms": 13489014,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 21,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 513,
+      "timestamp_ms": 1793587932392,
+      "monotonic_ms": 13490020,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.67,
+        "clock_mhz": 1702.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 13,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 19,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 514,
+      "timestamp_ms": 1793587933399,
+      "monotonic_ms": 13491026,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.5,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 17,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 30,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 47,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 515,
+      "timestamp_ms": 1793587934405,
+      "monotonic_ms": 13492032,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 516,
+      "timestamp_ms": 1793587935410,
+      "monotonic_ms": 13493038,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 22,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 58,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 517,
+      "timestamp_ms": 1793587936417,
+      "monotonic_ms": 13494044,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 518,
+      "timestamp_ms": 1793587937422,
+      "monotonic_ms": 13495049,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 17,
+        "clock_mhz": 1535.83,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 10,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 519,
+      "timestamp_ms": 1793587938429,
+      "monotonic_ms": 13496057,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.67,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 520,
+      "timestamp_ms": 1793587939435,
+      "monotonic_ms": 13497062,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.33,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 521,
+      "timestamp_ms": 1793587940441,
+      "monotonic_ms": 13498068,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 11,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 522,
+      "timestamp_ms": 1793587941447,
+      "monotonic_ms": 13499074,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.5,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 15,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 523,
+      "timestamp_ms": 1793587942452,
+      "monotonic_ms": 13500080,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.562
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 524,
+      "timestamp_ms": 1793587943459,
+      "monotonic_ms": 13501086,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.5,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 525,
+      "timestamp_ms": 1793587944465,
+      "monotonic_ms": 13502092,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1728,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 10,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 526,
+      "timestamp_ms": 1793587945471,
+      "monotonic_ms": 13503099,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 527,
+      "timestamp_ms": 1793587946478,
+      "monotonic_ms": 13504105,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 528,
+      "timestamp_ms": 1793587947482,
+      "monotonic_ms": 13505110,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.5,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 529,
+      "timestamp_ms": 1793587948489,
+      "monotonic_ms": 13506116,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 38,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 43,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 530,
+      "timestamp_ms": 1793587949495,
+      "monotonic_ms": 13507122,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 531,
+      "timestamp_ms": 1793587950501,
+      "monotonic_ms": 13508128,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1702.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 532,
+      "timestamp_ms": 1793587951507,
+      "monotonic_ms": 13509134,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.67,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 533,
+      "timestamp_ms": 1793587952513,
+      "monotonic_ms": 13510141,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 17.17,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 11,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 534,
+      "timestamp_ms": 1793587953519,
+      "monotonic_ms": 13511146,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 54,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 28,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.542,
+        "rails_w": {
+          "VDD_IN": 7.542,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 535,
+      "timestamp_ms": 1793587954525,
+      "monotonic_ms": 13512153,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 19,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 536,
+      "timestamp_ms": 1793587955532,
+      "monotonic_ms": 13513159,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.5,
+        "clock_mhz": 1728,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 54,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 28,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 20,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 537,
+      "timestamp_ms": 1793587956537,
+      "monotonic_ms": 13514165,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 47,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 33,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 25,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.542,
+        "rails_w": {
+          "VDD_IN": 7.542,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 538,
+      "timestamp_ms": 1793587957543,
+      "monotonic_ms": 13515171,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 52,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 29,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 23,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 539,
+      "timestamp_ms": 1793587958549,
+      "monotonic_ms": 13516177,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 28,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 51,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 21,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 540,
+      "timestamp_ms": 1793587959555,
+      "monotonic_ms": 13517183,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 22,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 541,
+      "timestamp_ms": 1793587960562,
+      "monotonic_ms": 13518189,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1728,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 19,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.566
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 542,
+      "timestamp_ms": 1793587961568,
+      "monotonic_ms": 13519195,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.581,
+        "rails_w": {
+          "VDD_IN": 7.581,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.562
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 543,
+      "timestamp_ms": 1793587962574,
+      "monotonic_ms": 13520201,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 77,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 17,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.542,
+        "rails_w": {
+          "VDD_IN": 7.542,
+          "VDD_CPU_GPU_CV": 1.655,
+          "VDD_SOC": 2.562
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 544,
+      "timestamp_ms": 1793587963580,
+      "monotonic_ms": 13521207,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.66,
+        "rails_w": {
+          "VDD_IN": 7.66,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 545,
+      "timestamp_ms": 1793587964585,
+      "monotonic_ms": 13522213,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 14.83,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 546,
+      "timestamp_ms": 1793587965591,
+      "monotonic_ms": 13523218,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16,
+        "clock_mhz": 1728,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 547,
+      "timestamp_ms": 1793587966597,
+      "monotonic_ms": 13524224,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.5,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 11,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 548,
+      "timestamp_ms": 1793587967603,
+      "monotonic_ms": 13525230,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.5,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 73,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 549,
+      "timestamp_ms": 1793587968609,
+      "monotonic_ms": 13526236,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 68,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.731,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 550,
+      "timestamp_ms": 1793587969615,
+      "monotonic_ms": 13527242,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 11,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 66,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.692,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 551,
+      "timestamp_ms": 1793587970621,
+      "monotonic_ms": 13528248,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.17,
+        "clock_mhz": 1651,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 10,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 1497
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1497
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 552,
+      "timestamp_ms": 1793587971626,
+      "monotonic_ms": 13529254,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1292.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 553,
+      "timestamp_ms": 1793587972633,
+      "monotonic_ms": 13530260,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.33,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 54,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 21,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 554,
+      "timestamp_ms": 1793587973638,
+      "monotonic_ms": 13531266,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 1676.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 10,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 23,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 49,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 555,
+      "timestamp_ms": 1793587974643,
+      "monotonic_ms": 13532271,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15,
+        "clock_mhz": 1343.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 76,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 0,
+            "clock_mhz": 729
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.739,
+        "rails_w": {
+          "VDD_IN": 7.739,
+          "VDD_CPU_GPU_CV": 1.774,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 556,
+      "timestamp_ms": 1793587975651,
+      "monotonic_ms": 13533278,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.5,
+        "clock_mhz": 1702.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 23,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 15,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 43,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 557,
+      "timestamp_ms": 1793587976657,
+      "monotonic_ms": 13534285,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1010.67,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 9,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1574
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1574
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 558,
+      "timestamp_ms": 1793587977664,
+      "monotonic_ms": 13535292,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.33,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 1,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 30,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.734,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 559,
+      "timestamp_ms": 1793587978670,
+      "monotonic_ms": 13536297,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.33,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 31,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 560,
+      "timestamp_ms": 1793587979675,
+      "monotonic_ms": 13537302,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1036.33,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 8,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1651
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 74,
+            "clock_mhz": 1651
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 35,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 561,
+      "timestamp_ms": 1793587980681,
+      "monotonic_ms": 13538308,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 16.17,
+        "clock_mhz": 985,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 5,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 4,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1497
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1497
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 39,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.7,
+        "rails_w": {
+          "VDD_IN": 7.7,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.601
+        }
+      }
+    },
+    {
+      "session_id": "84c0d384-d5ad-42cc-9572-dfda3e9d6525",
+      "source_url": "ws://192.168.1.36:8765/stream",
+      "sample_id": 562,
+      "timestamp_ms": 1793587981687,
+      "monotonic_ms": 13539315,
+      "interval_ms": 1000,
+      "source": "tegrastats+sysfs",
+      "cpu": {
+        "usage_pct": 15.83,
+        "clock_mhz": 1062,
+        "cores": [
+          {
+            "id": 0,
+            "online": true,
+            "usage_pct": 7,
+            "clock_mhz": 729
+          },
+          {
+            "id": 1,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 729
+          },
+          {
+            "id": 2,
+            "online": true,
+            "usage_pct": 6,
+            "clock_mhz": 729
+          },
+          {
+            "id": 3,
+            "online": true,
+            "usage_pct": 3,
+            "clock_mhz": 729
+          },
+          {
+            "id": 4,
+            "online": true,
+            "usage_pct": 2,
+            "clock_mhz": 1728
+          },
+          {
+            "id": 5,
+            "online": true,
+            "usage_pct": 75,
+            "clock_mhz": 1728
+          }
+        ]
+      },
+      "gpu": {
+        "usage_pct": 31,
+        "clock_mhz": 306
+      },
+      "power": {
+        "input_w": 7.66,
+        "rails_w": {
+          "VDD_IN": 7.66,
+          "VDD_CPU_GPU_CV": 1.695,
+          "VDD_SOC": 2.606
+        }
+      }
+    }
+  ]
+}
