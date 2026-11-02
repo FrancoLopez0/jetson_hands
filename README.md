@@ -48,7 +48,7 @@ Then enter `ws://127.0.0.1:18765/stream` in the viewer.
 
 Connect the viewer and scroll to **Jetson telemetry**. Four live charts show:
 
-- Board input power, combined CPU/GPU/CV rail power and SoC power in watts.
+- Module input power, combined CPU/GPU/CV rail power and SoC power in watts.
 - Mean CPU utilization and GPU utilization in percent.
 - Mean CPU clock and GPU clock in MHz.
 - Utilization of each CPU core.
@@ -57,7 +57,8 @@ The Jetson samples `tegrastats` once per second. On this Orin, GPU frequency is
 not printed by `tegrastats`, so it is read from the GPU devfreq `cur_freq` sysfs
 node and converted from Hz to MHz. This collector is independent of inference.
 CPU summaries average online cores; each core's utilization and clock are also
-included in the data exports. `VDD_IN` is board input power, not wall power;
+included in the data exports. `VDD_IN` is total module power, not a measurement
+of the complete developer kit, all peripherals or battery-side power;
 the CPU/GPU/CV rail is a shared measurement, not independent device powers.
 
 Export buttons:

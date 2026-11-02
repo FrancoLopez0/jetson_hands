@@ -10,8 +10,8 @@ class TelemetryDashboard {
     this.error = "";
     this.palette = ["#6fe4b3", "#78b7ff", "#ffc875", "#ed94c9", "#b49bff", "#73d8de"];
     this.charts = [
-      { id: "chart-power", title: "Board power", unit: "W", series: () => [
-        this.series("Input (VDD_IN)", 0, s => s.power.input_w),
+      { id: "chart-power", title: "Module power", unit: "W", series: () => [
+        this.series("Module input (VDD_IN)", 0, s => s.power.input_w),
         this.series("CPU + GPU + CV rail", 1, s => s.power.rails_w.VDD_CPU_GPU_CV),
         this.series("SoC rail", 2, s => s.power.rails_w.VDD_SOC),
       ] },
@@ -207,7 +207,7 @@ class TelemetryDashboard {
       sampling_interval_ms: 1000, retained_sample_limit: this.limit, chart_window_seconds: 120,
       units: { power: "W", clocks: "MHz", utilization: "%" },
       definitions: { cpu: "Mean utilization/clock of online cores; per-core values included",
-        input_power: "VDD_IN board input rail, not wall power",
+        input_power: "VDD_IN total module power, not the complete developer kit or battery-side power",
         cpu_gpu_cv_power: "Combined CPU/GPU/CV rail, not separate CPU and GPU power" }, samples: this.samples };
     this.download(new Blob([JSON.stringify(report, null, 2)], { type: "application/json" }), this.filename("json"));
   }
@@ -242,7 +242,7 @@ class TelemetryDashboard {
       this.draw(context, 768, 282, chart); context.restore();
     });
     context.font = "12px system-ui"; context.fillStyle = "#9aaac0";
-    context.fillText("CPU clocks/utilization are online-core means. VDD_IN is board input; CPU/GPU/CV is a shared rail. Missing values are gaps.", 24, 730);
+    context.fillText("CPU clocks/utilization are online-core means. VDD_IN is module power, not full-kit/battery input. CPU/GPU/CV share a rail. Missing values are gaps.", 24, 730);
     canvas.toBlob(blob => { if (blob) this.download(blob, this.filename("png")); }, "image/png");
   }
 }

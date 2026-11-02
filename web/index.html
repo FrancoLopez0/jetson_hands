@@ -29,7 +29,7 @@
       <div class="telemetry-heading"><div><span class="eyebrow">BOARD MONITOR</span><h2 id="telemetry-title">Jetson telemetry</h2></div>
         <span id="telemetry-status" role="status">Connect to collect telemetry</span></div>
       <div class="metrics telemetry-values">
-        <div><strong id="power-now">—</strong><span>Board input power</span></div>
+        <div><strong id="power-now">—</strong><span>Module input power</span></div>
         <div><strong id="cpu-now">—</strong><span>CPU mean utilization</span></div>
         <div><strong id="gpu-now">—</strong><span>GPU utilization</span></div>
         <div><strong id="cpu-clock-now">—</strong><span>CPU mean clock</span></div>
@@ -40,12 +40,12 @@
         <span><span id="telemetry-sample-count">0</span> / 3600 samples</span>
       </div>
       <div class="charts-grid">
-        <canvas id="chart-power" role="img" aria-label="Board input, combined CPU GPU CV rail and SoC power in watts over time"></canvas>
+        <canvas id="chart-power" role="img" aria-label="Module input, combined CPU GPU CV rail and SoC power in watts over time"></canvas>
         <canvas id="chart-usage" role="img" aria-label="CPU mean and GPU utilization percentages over time"></canvas>
         <canvas id="chart-clocks" role="img" aria-label="CPU mean and GPU clock frequencies in megahertz over time"></canvas>
         <canvas id="chart-cores" role="img" aria-label="Utilization percentage of each CPU core over time"></canvas>
       </div>
-      <p class="note">Sampled at 1 Hz. Charts show the last 2 minutes; CSV/JSON export all retained samples (up to 1 hour). History remains available after disconnecting and is cleared when this page reloads. CPU summaries are means of online cores; per-core utilization and clocks are in the exports. Power is measured at board rails, not at the wall; CPU/GPU/CV share a rail. Missing readings are gaps, not zeros.</p>
+      <p class="note">Sampled at 1 Hz. Charts show the last 2 minutes; CSV/JSON export all retained samples (up to 1 hour). History remains available after disconnecting and is cleared when this page reloads. CPU summaries are means of online cores; per-core utilization and clocks are in the exports. VDD_IN measures module power, not the complete kit or battery input; CPU/GPU/CV share a rail. Missing readings are gaps, not zeros.</p>
     </section>
   </main>
   <script src="telemetry.js"></script>
