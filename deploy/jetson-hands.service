@@ -1,0 +1,19 @@
+[Unit]
+Description=Jetson V4L2 MediaPipe hand tracking
+After=network.target
+Conflicts=jetson-camera-web.service
+
+[Service]
+Type=simple
+User=talos
+SupplementaryGroups=video
+WorkingDirectory=/home/talos/jetson-hands
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/home/talos/jetson-hands/.env
+ExecStart=/home/talos/jetson-hands/.venv/bin/python -m uvicorn jetson_hands.server:create_app --factory --host 0.0.0.0 --port 8765 --workers 1 --ws websockets-sansio --ws-max-size 4096 --ws-max-queue 1 --ws-per-message-deflate false --no-access-log
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target

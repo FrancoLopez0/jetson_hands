@@ -1,0 +1,27 @@
+[project]
+name = "jetson-hands"
+version = "0.1.0"
+description = "Direct V4L2 hand tracking and single-receiver video streaming"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "fastapi>=0.121,<1",
+    "uvicorn>=0.38,<1",
+    "websockets>=15,<17",
+    "mediapipe==1.2.0",
+    "numpy>=2.3,<3",
+    "opencv-contrib-python>=4.12,<5",
+]
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["jetson_hands"]
+
+[dependency-groups]
+dev = ["pytest>=9,<10", "httpx>=0.28,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

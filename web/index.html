@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Jetson · Hand tracking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">OV5647 · LIVE VISION</span><h1>Jetson hand tracking</h1><p>Direct camera capture. Live landmarks. One receiver.</p></header>
+    <form id="connection">
+      <label>Jetson WebSocket URL<input id="address" type="url" value="ws://192.168.1.36:8765/stream" required></label>
+      <label>Access token<input id="token" type="password" autocomplete="off" placeholder="Paste your access token" required></label>
+      <div class="buttons"><button id="connect" type="submit">Connect</button><button id="disconnect" type="button" disabled>Disconnect</button></div>
+    </form>
+    <div class="status"><span id="indicator"></span><span id="status" role="status">Disconnected</span></div>
+    <div class="video"><canvas id="video" width="640" height="360" aria-label="Live hand tracking camera"></canvas><span id="placeholder">Connect to view the camera</span></div>
+    <section class="metrics" aria-label="Stream metrics">
+      <div><strong id="fps">—</strong><span>Displayed FPS</span></div>
+      <div><strong id="hands">—</strong><span>Hands</span></div>
+      <div><strong id="inference">—</strong><span>Inference</span></div>
+      <div><strong id="pipeline">—</strong><span>Dequeue → encoded</span></div>
+      <div><strong id="roundtrip">—</strong><span>ACK → displayed</span></div>
+    </section>
+    <p class="note">Dequeue → encoded starts when the driver buffer is read, excluding sensor exposure. ACK → displayed includes waiting for a frame, network transfer and image decoding; it is not a synchronized camera-to-screen latency measurement. The token stays in this tab's memory.</p>
+    <section id="telemetry" aria-labelledby="telemetry-title">
+      <div class="telemetry-heading"><div><span class="eyebrow">BOARD MONITOR</span><h2 id="telemetry-title">Jetson telemetry</h2></div>
+        <span id="telemetry-status" role="status">Connect to collect telemetry</span></div>
+      <div class="metrics telemetry-values">
+        <div><strong id="power-now">—</strong><span>Board input power</span></div>
+        <div><strong id="cpu-now">—</strong><span>CPU mean utilization</span></div>
+        <div><strong id="gpu-now">—</strong><span>GPU utilization</span></div>
+        <div><strong id="cpu-clock-now">—</strong><span>CPU mean clock</span></div>
+        <div><strong id="gpu-clock-now">—</strong><span>GPU clock</span></div>
+      </div>
+      <div class="telemetry-toolbar">
+        <div class="buttons"><button id="export-csv" type="button" disabled>Export CSV</button><button id="export-json" type="button" disabled>Export JSON</button><button id="export-charts" type="button" disabled>Export charts PNG</button><button id="clear-telemetry" type="button" disabled>Clear history</button></div>
+        <span><span id="telemetry-sample-count">0</span> / 3600 samples</span>
+      </div>
+      <div class="charts-grid">
+        <canvas id="chart-power" role="img" aria-label="Board input, combined CPU GPU CV rail and SoC power in watts over time"></canvas>
+        <canvas id="chart-usage" role="img" aria-label="CPU mean and GPU utilization percentages over time"></canvas>
+        <canvas id="chart-clocks" role="img" aria-label="CPU mean and GPU clock frequencies in megahertz over time"></canvas>
+        <canvas id="chart-cores" role="img" aria-label="Utilization percentage of each CPU core over time"></canvas>
+      </div>
+      <p class="note">Sampled at 1 Hz. Charts show the last 2 minutes; CSV/JSON export all retained samples (up to 1 hour). History remains available after disconnecting and is cleared when this page reloads. CPU summaries are means of online cores; per-core utilization and clocks are in the exports. Power is measured at board rails, not at the wall; CPU/GPU/CV share a rail. Missing readings are gaps, not zeros.</p>
+    </section>
+  </main>
+  <script src="telemetry.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

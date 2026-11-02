@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+*.token
+*.log
+models/*.task
+runtime/
+preview*.jpg
+native/build/
+models/tensorrt/
+.atl/
