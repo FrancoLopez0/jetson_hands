@@ -44,7 +44,11 @@ class TelemetryDashboard {
   beginSession(source) {
     const url = new URL(source);
     this.source = `${url.protocol}//${url.host}${url.pathname}`;
-    this.sessionId = crypto.randomUUID();
+    const id = crypto.getRandomValues(new Uint8Array(16));
+    id[6] = (id[6] & 0x0f) | 0x40;
+    id[8] = (id[8] & 0x3f) | 0x80;
+    const hex = Array.from(id, value => value.toString(16).padStart(2, "0")).join("");
+    this.sessionId = [hex.slice(0,8), hex.slice(8,12), hex.slice(12,16), hex.slice(16,20), hex.slice(20)].join("-");
     this.connected = true;
     this.receivedAt = null;
     this.lastIdentity = null;

@@ -1,18 +1,42 @@
 import asyncio
 from contextlib import asynccontextmanager
 import hmac
+from pathlib import Path
+import subprocess
 import time
 
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Header, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
 
 from .config import Settings
+from .finger_follow import register_follow
+
+
+class ImageControls(BaseModel):
+    exposure_us: int = Field(ge=131, le=499500)
+    gain: int = Field(ge=16, le=1023)
+    gamma: float = Field(ge=0.2, le=4)
+    fps: int | None = Field(default=None, ge=2, le=90)
+    black: int | None = Field(default=None, ge=0, le=65000)
+    white: int | None = Field(default=None, ge=64, le=65535)
+    red: float | None = Field(default=None, ge=.25, le=4)
+    green: float | None = Field(default=None, ge=.25, le=4)
+    blue: float | None = Field(default=None, ge=.25, le=4)
+    auto_levels: bool | None = None
+    auto_wb: bool | None = None
+    denoise: bool | None = None
+    flip: bool | None = None
+    jpeg_quality: int | None = Field(default=None, ge=40, le=95)
+    preview_fps: int | None = Field(default=None, ge=1, le=60)
 
 
 class FrameHub:
     """Owned by the event loop. Memory is bounded to a single processed frame."""
     def __init__(self):
         self.latest = None
+        self.latest_pointing = None
         self.error = None
         self.changed = asyncio.Event()
         self.receiver = None
@@ -22,8 +46,12 @@ class FrameHub:
         self.error = None
         self.changed.set()
 
+    def publish_pointing(self, x, width, captured_at):
+        self.latest_pointing = (x, width, captured_at)
+
     def fail(self, error):
         self.error = error
+        self.latest_pointing = None
         self.changed.set()
 
 
@@ -43,6 +71,7 @@ def create_app(settings=None, pipeline_factory=None, telemetry_factory=None):
         else:
             factory = pipeline_factory
         pipeline = factory(settings, asyncio.get_running_loop(), hub)
+        app.state.pipeline = pipeline
         pipeline.start()
         try:
             await telemetry.start()
@@ -54,6 +83,7 @@ def create_app(settings=None, pipeline_factory=None, telemetry_factory=None):
     app = FastAPI(lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
     app.state.hub = hub
     app.state.telemetry = telemetry
+    register_follow(app, hub, settings)
 
     @app.get("/health")
     async def health():
@@ -62,6 +92,42 @@ def create_app(settings=None, pipeline_factory=None, telemetry_factory=None):
         # No image or recognition data is exposed without authentication.
         return JSONResponse({"ready": ready, "receiver_connected": hub.receiver is not None},
                             status_code=200 if ready else 503)
+
+    image_lock = asyncio.Lock()
+    max_fps = (15, 30, 30, 90, 60)[settings.sensor_mode]
+
+    def image_state():
+        controls = app.state.pipeline.controls
+        return {**controls, "max_fps": max_fps,
+                "max_exposure_us": min(499500, 1_000_000 // controls["fps"] - 500),
+                "capture_width": settings.width, "capture_height": settings.height}
+
+    def authorize_image(authorization):
+        scheme, _, token = (authorization or "").partition(" ")
+        if scheme.lower() != "bearer" or not hmac.compare_digest(token.encode(), settings.token.encode()):
+            raise HTTPException(401, "Invalid access token")
+
+    @app.get("/api/image-controls")
+    async def image_controls(authorization: str | None = Header(default=None)):
+        authorize_image(authorization)
+        return image_state()
+
+    @app.put("/api/image-controls")
+    async def update_image_controls(values: ImageControls, authorization: str | None = Header(default=None)):
+        authorize_image(authorization)
+        async with image_lock:
+            controls = {**app.state.pipeline.controls, **values.model_dump(exclude_none=True)}
+            if controls["fps"] > max_fps:
+                raise HTTPException(422, "FPS exceeds the current sensor mode")
+            if controls["exposure_us"] > min(499500, 1_000_000 // controls["fps"] - 500):
+                raise HTTPException(422, "La exposición supera el intervalo del cuadro")
+            if controls["white"] <= controls["black"] + 32:
+                raise HTTPException(422, "El nivel blanco debe superar al negro por más de 32")
+            try:
+                await asyncio.to_thread(app.state.pipeline.set_image_controls, controls)
+            except (RuntimeError, OSError, subprocess.SubprocessError) as error:
+                raise HTTPException(503, "Could not apply camera controls") from error
+        return image_state()
 
     @app.websocket("/stream")
     async def stream(ws: WebSocket):
@@ -138,4 +204,7 @@ def create_app(settings=None, pipeline_factory=None, telemetry_factory=None):
             if owns_slot and hub.receiver is ws:
                 hub.receiver = None
 
+    web = Path(__file__).resolve().parents[1] / "web"
+    if web.is_dir():
+        app.mount("/", StaticFiles(directory=web, html=True), name="viewer")
     return app

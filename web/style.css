@@ -6,6 +6,30 @@ main { max-width: 1040px; margin: 42px auto; padding: 0 24px; }
 h1 { font-size: clamp(26px, 4vw, 38px); margin: 10px 0; }
 p { color: #9aaac0; }
 form { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; padding: 22px; background: #141d2a; border: 1px solid #26354a; border-radius: 14px; margin-top: 28px; }
+form[hidden] { display: none; }
+.config-panel { margin-top: 16px; padding: 14px 16px; background: #141d2a; border: 1px solid #26354a; border-radius: 10px; }
+.config-panel summary { cursor: pointer; font-weight: 650; }
+#sensor-mode { font-weight: 400; font-size: 13px; color: #9aaac0; margin-left: 8px; }
+.compact-controls { margin-top: 12px; padding: 8px 0; background: transparent; border: 0; gap: 12px; }
+.compact-controls label { min-width: 130px; }
+.image-checks { display: flex; flex-wrap: wrap; gap: 8px 16px; width: 100%; }
+.image-checks label { display: flex; align-items: center; flex: initial; min-width: 0; }
+.image-checks input { width: auto; }
+#reset-zone { background: #29394f; color: #e8edf5; }
+#image-status { margin: 12px 0 0; font-size: 13px; }
+.camera-link { color: #6fe4b3; margin-left: auto; }
+.pan-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 0 0 16px; padding: 12px 14px; border: 1px solid #26354a; border-radius: 10px; }
+.pan-controls legend { padding: 0 6px; font-weight: 650; }
+.pan-controls label { min-width: 140px; }
+.pan-controls input[type="range"] { accent-color: #6fe4b3; padding: 0; }
+.pan-controls .pan-toggle { display: flex; align-items: center; flex: initial; min-width: 0; }
+.pan-toggle input { width: auto; }
+#pan-status { width: 100%; margin: 0; font-size: 13px; }
+#image-controls { display: block; background: transparent; border: 0; padding: 0; margin: 0; }
+#image-fields { display: flex; flex-wrap: wrap; align-items: end; margin: 0; min-width: 0; }
+.compact-controls .slider-control { min-width: 150px; }
+.slider-control input[type="range"] { padding: 0; accent-color: #6fe4b3; }
+.slider-control input[type="number"] { padding: 6px 10px; }
 label { display: grid; gap: 8px; font-size: 13px; flex: 1; min-width: 210px; }
 input { background: #0c1420; border: 1px solid #37465c; border-radius: 7px; padding: 11px; color: inherit; width: 100%; }
 input:focus-visible, button:focus-visible { outline: 2px solid #6fe4b3; outline-offset: 3px; }

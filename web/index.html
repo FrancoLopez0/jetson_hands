@@ -4,27 +4,78 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <title>Jetson · Hand tracking</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Jetson · Seguimiento del índice</title>
+  <link rel="stylesheet" href="style.css?v=finger-pan">
 </head>
 <body>
   <main>
-    <header><span class="eyebrow">OV5647 · LIVE VISION</span><h1>Jetson hand tracking</h1><p>Direct camera capture. Live landmarks. One receiver.</p></header>
+    <header><span class="eyebrow">OV5647 · LIVE VISION</span><h1>Seguimiento del índice</h1></header>
     <form id="connection">
-      <label>Jetson WebSocket URL<input id="address" type="url" value="ws://192.168.1.36:8765/stream" required></label>
+      <label>Jetson WebSocket URL<input id="address" type="url" required></label>
       <label>Access token<input id="token" type="password" autocomplete="off" placeholder="Paste your access token" required></label>
       <div class="buttons"><button id="connect" type="submit">Connect</button><button id="disconnect" type="button" disabled>Disconnect</button></div>
     </form>
-    <div class="status"><span id="indicator"></span><span id="status" role="status">Disconnected</span></div>
+    <div class="status"><span id="indicator"></span><span id="status" role="status">Disconnected</span> <a class="camera-link" href="#image-panel">Ajustes de cámara</a></div>
+    <fieldset id="pan-controls" class="pan-controls">
+      <legend>Seguimiento horizontal del dedo</legend>
+      <label class="pan-toggle"><input id="pan-enabled" type="checkbox" disabled> Motores listos · seguir el índice</label>
+      <label>Velocidad angular máxima (rad/s)
+        <input id="pan-speed" type="range" min="0.20" max="0.65" step="0.05" value="0.45">
+        <output id="pan-speed-value" for="pan-speed">0,45</output>
+      </label>
+      <label class="pan-toggle"><input id="pan-invert" type="checkbox"> Invertir izquierda y derecha</label>
+      <p id="pan-status" role="status">Conectá la cámara para habilitar el seguimiento.</p>
+    </fieldset>
     <div class="video"><canvas id="video" width="640" height="360" aria-label="Live hand tracking camera"></canvas><span id="placeholder">Connect to view the camera</span></div>
     <section class="metrics" aria-label="Stream metrics">
       <div><strong id="fps">—</strong><span>Displayed FPS</span></div>
-      <div><strong id="hands">—</strong><span>Hands</span></div>
+      <div><strong id="index-tip">—</strong><span>Punta del índice · X / Y</span></div>
+      <div><strong id="index-offset">—</strong><span>Desde el centro · ΔX / ΔY (px)<br>+X derecha · +Y arriba</span></div>
+      <div><strong id="safe-offset">—</strong><span id="zone-state">Desplazamiento útil (px)</span></div>
       <div><strong id="inference">—</strong><span>Inference</span></div>
       <div><strong id="pipeline">—</strong><span>Dequeue → encoded</span></div>
       <div><strong id="roundtrip">—</strong><span>ACK → displayed</span></div>
     </section>
     <p class="note">Dequeue → encoded starts when the driver buffer is read, excluding sensor exposure. ACK → displayed includes waiting for a frame, network transfer and image decoding; it is not a synchronized camera-to-screen latency measurement. The token stays in this tab's memory.</p>
+      <details class="config-panel">
+      <summary>Zona neutra y marcador</summary>
+      <form id="zone-form" class="compact-controls">
+        <label>Ancho de zona (px)<input name="zoneWidth" type="number" min="4" max="2000" step="1" required></label>
+        <label>Alto de zona (px)<input name="zoneHeight" type="number" min="4" max="2000" step="1" required></label>
+        <label>Margen de salida (px)<input name="margin" type="number" min="0" max="250" step="1" required></label>
+        <label>Suavizado (ms)<input name="smoothing" type="number" min="0" max="1000" step="1" required></label>
+        <label>Ancho del marcador (px)<input name="markerWidth" type="number" min="6" max="300" step="1" required></label>
+        <label>Alto del marcador (px)<input name="markerHeight" type="number" min="6" max="300" step="1" required></label>
+        <button type="submit">Aplicar zona</button><button id="reset-zone" type="button">Restaurar zona</button>
+      </form>
+      <p class="note">Dentro de la zona neutra el desplazamiento útil es cero. El borde punteado marca el margen que hay que superar para salir.</p>
+    </details>
+    <details id="image-panel" class="config-panel" open>
+      <summary>Ajustes de cámara <span id="sensor-mode"></span></summary>
+      <p id="image-status" role="status">Conectate con el token para habilitar los ajustes.</p>
+      <form id="image-controls" aria-label="Ajustes de imagen">
+       <fieldset id="image-fields" class="compact-controls" disabled>
+        <label>Exposición (ms)<input id="exposure" type="number" min="0.131" step="0.001" required></label>
+        <label>Ganancia<input id="gain" type="number" min="16" max="1023" step="1" required></label>
+        <label>FPS de captura<input id="image-fps" type="number" min="2" max="90" step="1" required></label>
+        <label>Gamma<input id="gamma" type="number" min="0.2" max="4" step="0.1" required></label>
+        <label>Nivel negro<input id="black" type="number" min="0" max="65000" step="1" required></label>
+        <label>Nivel blanco<input id="white" type="number" min="64" max="65535" step="1" required></label>
+        <label>Rojo<input id="red" type="number" min="0.25" max="4" step="0.01" required></label>
+        <label>Verde<input id="green" type="number" min="0.25" max="4" step="0.01" required></label>
+        <label>Azul<input id="blue" type="number" min="0.25" max="4" step="0.01" required></label>
+        <label>FPS del visor<input id="preview-fps" type="number" min="1" max="60" step="1" required></label>
+        <label>Calidad JPEG<input id="jpeg-quality" type="number" min="40" max="95" step="1" required></label>
+        <div class="image-checks">
+          <label><input id="auto-levels" type="checkbox"> Niveles automáticos</label>
+          <label><input id="auto-wb" type="checkbox"> Balance de blancos automático</label>
+          <label><input id="denoise" type="checkbox"> Reducir ruido</label>
+          <label><input id="flip" type="checkbox"> Rotar 180°</label>
+        </div>
+        <button id="apply-image" type="submit">Aplicar imagen</button>
+       </fieldset>
+      </form>
+    </details>
     <section id="telemetry" aria-labelledby="telemetry-title">
       <div class="telemetry-heading"><div><span class="eyebrow">BOARD MONITOR</span><h2 id="telemetry-title">Jetson telemetry</h2></div>
         <span id="telemetry-status" role="status">Connect to collect telemetry</span></div>
@@ -48,7 +99,8 @@
       <p class="note">Sampled at 1 Hz. Charts show the last 2 minutes; CSV/JSON export all retained samples (up to 1 hour). History remains available after disconnecting and is cleared when this page reloads. CPU summaries are means of online cores; per-core utilization and clocks are in the exports. VDD_IN measures module power, not the complete kit or battery input; CPU/GPU/CV share a rail. Missing readings are gaps, not zeros.</p>
     </section>
   </main>
-  <script src="telemetry.js"></script>
-  <script src="app.js"></script>
+  <script src="telemetry.js?v=lan-session"></script>
+  <script src="pointer.js?v=2"></script>
+  <script src="app.js?v=finger-pan"></script>
 </body>
 </html>

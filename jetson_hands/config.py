@@ -22,6 +22,7 @@ class Settings:
     palm_engine: str = "models/tensorrt/palm.engine"
     hand_engine: str = "models/tensorrt/hand.engine"
     renderer: str = "standard"
+    overlay: str = "gesture"
 
     @classmethod
     def from_env(cls):
@@ -56,4 +57,6 @@ class Settings:
             raise ValueError("The TensorRT strategy supports one hand")
         if settings.renderer not in ("standard", "lut"):
             raise ValueError("renderer must be standard or lut")
+        if settings.overlay not in ("gesture", "index", "hand"):
+            raise ValueError("overlay must be gesture, index or hand")
         return settings

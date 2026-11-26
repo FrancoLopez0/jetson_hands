@@ -18,7 +18,14 @@ token-authenticated live viewer for one simultaneous receiver.
 The old `jetson-camera-web.service` is stopped/disabled because it uses the same
 camera. Its application and calibration files remain in `/home/talos/camera-web`.
 
-## Open the viewer on the PC
+## Open the viewer from the Jetson server
+
+Open port `8765` on the Jetson in your browser, paste the contents of
+`access.token`, and click **Connect**. The viewer fills in the stream URL
+from the address used to open the page. The server exposes only the
+`web/` directory as static files.
+
+## Serve a separate viewer on the PC
 
 From this project directory in PowerShell:
 
@@ -27,7 +34,8 @@ From this project directory in PowerShell:
 ```
 
 Open http://127.0.0.1:8000, paste the contents of `access.token`, and click
-**Connect**. To copy the token without printing it:
+**Connect**. When serving the viewer separately, enter the Jetson WebSocket
+URL in the address field. To copy the token without printing it:
 
 ```powershell
 (Get-Content -Raw .\access.token).Trim() | Set-Clipboard
@@ -143,6 +151,15 @@ ping/pong messages as well as the server's WebSocket heartbeat.
 
 **Run exactly one worker and one service instance.** The receiver slot and frame
 hub are process-local, and the camera has a single owner.
+
+## Index fingertip
+
+The default overlay draws the detected hand. Hold a pointing gesture with the
+index extended and the middle, ring and little fingers folded for 200 ms to
+show only the index tip. In this mode, each frame provides `index_tip` with
+normalized coordinates while pointing, or `null` otherwise.
+Set `HANDS_OVERLAY=hand` for the full skeleton or `HANDS_OVERLAY=index`
+for the fingertip without gesture activation.
 
 ## Recognition Strategy
 

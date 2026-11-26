@@ -17,7 +17,7 @@ def main():
     image = cv2.imdecode(np.frombuffer(data, np.uint8), cv2.IMREAD_COLOR)
     if image is None:
         raise RuntimeError("Could not decode MediaPipe test image")
-    strategy = MediaPipeHandsStrategy(Settings(token="unused-for-local-inference"))
+    strategy = MediaPipeHandsStrategy(Settings(token="unused-for-local-inference", overlay="hand"))
     try:
         result = strategy.process(image, 1)
         assert result["hands"], "No hands detected in the reference image"

@@ -19,6 +19,7 @@ class LandmarkEngine:
 
 def tracker(scores, detection):
     strategy = object.__new__(TensorRTHandsStrategy)
+    strategy.overlay = "index"
     strategy.hand = LandmarkEngine(scores)
     strategy.roi = HandROI(160, 120, 180, 0)
     strategy.age = 60

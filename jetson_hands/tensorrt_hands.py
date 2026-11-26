@@ -60,6 +60,7 @@ class TensorRTHandsStrategy(RecognitionStrategy):
     def __init__(self, settings):
         if settings.max_hands != 1:
             raise ValueError("TensorRTHandsStrategy tracks one hand")
+        self.overlay = settings.overlay
         self.palm = TensorRTEngine(settings.palm_engine, settings.trt_library)
         try:
             self.hand = TensorRTEngine(settings.hand_engine, settings.trt_library)
@@ -150,7 +151,7 @@ class TensorRTHandsStrategy(RecognitionStrategy):
             landmarks[:, :2] = xy / [width, height]
             landmarks[:, 2] /= float(np.linalg.norm(matrix[0, :2])) * width
             label = "Right" if handedness >= 0.5 else "Left"
-            draw_hand(bgr, xy, label, confidence, score_label="presence")
+            draw_hand(bgr, xy, label, confidence, score_label="presence", overlay=self.overlay)
             return {"hands": [{"handedness": label, "confidence": confidence,
                                "confidence_kind": "hand_presence",
                                "landmarks": [{"x": float(x), "y": float(y), "z": float(z)}

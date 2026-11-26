@@ -61,6 +61,14 @@ class V4L2Camera:
         self.error = None
         self.thread = None
 
+    def set_image_controls(self, exposure, gain, fps):
+        if not self.streaming:
+            raise RuntimeError("Camera is not streaming")
+        subprocess.run([
+            "v4l2-ctl", "-d", self.settings.device,
+            f"--set-ctrl=frame_rate={fps * 1000000},exposure={exposure},gain={gain}",
+        ], capture_output=True, check=True, timeout=2)
+
     def start(self):
         s = self.settings
         # The controls are specific to the installed NVIDIA OV5647 driver.
